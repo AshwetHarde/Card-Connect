@@ -1,0 +1,546 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+
+/* Global Styles */
+body, html {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  background: linear-gradient(135deg, #3f4040, #131313);
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center vertically */
+  align-items: center;     /* Center horizontally */
+  min-height: 100vh;      /* Full viewport height */
+  padding: 5px;          /* Added padding to prevent cut-off on smaller screens */
+}
+
+/* Form Container */
+.form-container {
+  background: #ffffff;
+  border-radius: 25px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 450px;           /* Fixed width */
+  height: 600px;         /* Fixed height */
+  max-width: 85%;
+  text-align: center;
+  margin-bottom: 20px;   /* Space between form and profile card */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Allow space for button at the bottom */
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 24px;
+  color: #333333;
+}
+
+/* Label Styles */
+label {
+  display: block;
+  text-align: left;
+  font-size: 17px;
+  font-weight: 600;
+  color: #000000;
+  margin: 15px 0 5px;
+}
+
+/* Input, Select, Textarea, Button Styles */
+input, select, textarea, button {
+  width: 100%;
+  padding: 12px 15px;
+  border: 3px solid #000000;
+  border-radius: 25px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+  transition: border 0.3s ease;
+}
+
+.char-limit {
+  margin-top: -10px;
+  color: #a0a0a0; /* Gray color for the text */
+  font-size: 12px; /* Adjust font size as needed */
+  text-align: left; /* Align text to the left */
+  padding-left: 10px;
+}
+
+
+input:focus, select:focus, textarea:focus {
+  border: 2px solid #007bff;
+  outline: none;
+}
+
+.name{
+
+  margin-bottom: 350px;
+}
+
+.bio{
+  margin-bottom: 300px;
+}
+
+.avcont{
+  margin-bottom: 45px;
+}
+
+.soc{
+  margin-bottom: 20px;
+}
+
+
+/* Textarea Specific Styles */
+textarea {
+  height: 100px;
+  resize: none;
+}
+
+/* Button Container */
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px; /* Space between form fields and buttons */
+}
+
+/* Button Styles */
+button {
+  background: #007bff;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: background 0.3s;
+  width: 100px;
+}
+
+.btn{  display: flex;
+  justify-content: space-between;
+  margin-top: 20px; /* Space between form fields and buttons */}
+
+button:hover {
+  background: #0056b3;
+}
+
+button:active {
+  background: #003f8c;
+}
+
+button:disabled {
+  background: #a3c3ff;
+  cursor: not-allowed;
+}
+
+.next {
+  border-radius: 25px;
+  width: 120px;
+  height: 45px;
+  font-size: 16px;
+}
+
+
+/* Gender Selection Styles */
+.gender-selection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px; /* Space between icons */
+  margin: 0 auto; /* Center horizontally */
+  margin-top: 400px; /* Adjust margin top to position vertically in the middle */
+  padding: 20px;
+}
+
+
+.gender-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  padding: 15px; /* Space around the icons */
+  border: 5px solid #888; /* Default border */
+  border-radius: 50%; /* Makes the border circular */
+  margin-top: -500px;
+}
+
+.gender-icon:hover {
+  transform: scale(1.1); /* Scale up on hover */
+}
+
+/* Styles for the Selected Gender Icon */
+.gender-icon.selected {
+  border: 7px solid #14ff3f; /* Green border for selected gender */
+  transform: scale(1.1); /* Slightly scale up the selected icon */
+}
+
+
+/* Avatar Selection Styles */
+.avatar-selection {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px; /* Add spacing between avatars */
+  max-height: 380px; /* Set a maximum height for the avatar selection area */
+  overflow-y: scroll; /* Enable vertical scrolling */
+  padding: 8px; /* Optional padding for aesthetics */
+  border: 3px solid #04d5ff; /* Optional border for better visibility */
+  border-radius: 25px; /* Optional border radius */
+  background-color: #eae7e7d4;
+}
+
+/* Hide scrollbar for Webkit browsers (Chrome, Safari) */
+.avatar-selection::-webkit-scrollbar {
+  display: none; /* Hide scrollbar */
+}
+
+/* Hide scrollbar for Firefox */
+.avatar-selection {
+  scrollbar-width: none; /* Hide scrollbar */
+}
+
+.avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: transform 0.2s, border 0.3s;
+}
+
+.avatar:hover {
+  transform: scale(1.1);
+}
+
+.avatar.selected {
+  border: 3px solid #007bff;
+  transform: scale(1.1);
+}
+
+
+.buttons-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px; /* Space between form fields and buttons */
+  gap: 60px;
+}
+
+/* Profile Card Styles */
+.profile-card {
+  position: relative; /* Needed for absolute positioning of the pseudo-element */
+  text-align: center;
+  background: #ffffff; /* White background for the card */
+  border-radius: 45px;
+  padding: 30px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  width: 280px;
+  height: 380px;
+  max-width: 100%;
+  margin-bottom: 20px; /* Space between profile cards */
+  overflow: hidden; /* Ensures pseudo-elements don't overflow */
+}
+
+/* Gradient Background on the Upper Side */
+.profile-card::before {
+  content: '';
+  position: absolute; /* Absolute positioning to place it correctly */
+  top: -20px; /* Position it above the card */
+  left: 0;
+  right: 0;
+  height: 180px; /* Height of the gradient area */
+  background: linear-gradient(108.4deg, rgb(253, 44, 56) 3.3%, rgb(176, 2, 12) 98.4%);
+
+  border-radius:  0 0 45px 45px; /* Round the top corners */
+  z-index: 0; /* Ensure it's behind the content */
+}
+
+/* Avatar Image */
+.profile-card img.avatar-image {
+  width: 100px;
+  height: 100px;
+  top: 70px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  position: relative; /* Ensure it appears above the gradient */
+  z-index: 1; /* Bring it above the gradient */
+  border: 8px solid #ffffff;
+  background: linear-gradient(108.4deg, rgb(201, 25, 33) 3.3%, rgb(130, 2, 9) 98.4%);
+
+}
+
+.profile-card h2 {
+  top: 40px;
+  font-size: 24px;
+  color: #000000;
+  margin: 15px 0 10px;
+  position: relative; /* Ensure text appears above the gradient */
+  z-index: 1; /* Bring it above the gradient */
+}
+
+.profile-card h4 {
+  top: 35px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #000000;
+  margin: 0;
+  position: relative; /* Ensure text appears above the gradient */
+  z-index: 1; /* Bring it above the gradient */
+}
+
+.profile-card p {
+  top: -8px;
+  font-size: 13px;
+  color: #000000;
+  margin: 15px 0;
+  line-height: 1.5;
+  position: relative; /* Ensure text appears above the gradient */
+  z-index: 1; /* Bring it above the gradient */
+}
+
+
+hr{
+  margin-top: 45px;
+  background: linear-gradient(108.4deg, rgb(253, 44, 56) 3.3%, rgb(199, 5, 14) 98.4%);
+  width: 70%;
+  height: 2.5px;
+  border: none;
+}
+
+/* Social Links Styles */
+.social-links {
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.social-icon {
+  margin: 0 10px;
+  color: #555; /* Default icon color */
+  transition: color 0.2s;
+}
+
+.social-icon:hover {
+  color: #007bff; /* Change color on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .form-container,
+  .profile-card {
+    width: 100%; /* Full-width for mobile screens */
+    padding: 20px;
+  }
+
+  .avatar {
+    width: 50px;
+    height: 50px;
+  }
+
+  .profile-card img.avatar-image {
+    width: 80px;
+    height: 80px;
+  }
+
+  .gender-selection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px; /* Space between icons */
+    margin: 0 auto; /* Center horizontally */
+    margin-top: 400px; /* Adjust margin top to position vertically in the middle */
+    padding: 20px;
+  }
+  
+  .profile-card {
+    position: relative; /* Needed for absolute positioning of the pseudo-element */
+    text-align: center;
+    background: #ffffff; /* White background for the card */
+    border-radius: 45px;
+    padding: 30px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    width: 280px;
+    height: 380px;
+    max-width: 100%;
+    margin-bottom: 20px; /* Space between profile cards */
+    overflow: hidden; /* Ensures pseudo-elements don't overflow */
+  }
+  
+  /* Gradient Background on the Upper Side */
+  .profile-card::before {
+    content: '';
+    position: absolute; /* Absolute positioning to place it correctly */
+    top: -20px; /* Position it above the card */
+    left: 0;
+    right: 0;
+    height: 180px; /* Height of the gradient area */
+    background: linear-gradient(108.4deg, rgb(253, 44, 56) 3.3%, rgb(176, 2, 12) 98.4%);
+  
+    border-radius:  0 0 45px 45px; /* Round the top corners */
+    z-index: 0; /* Ensure it's behind the content */
+  }
+
+}
+
+@media (max-width: 576px) {
+  h2 {
+    font-size: 20px;
+  }
+
+  h4, p {
+    font-size: 14px;
+  }
+
+  .profile-card h2 {
+    font-size: 20px;
+  }
+
+  .gender-selection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px; /* Space between icons */
+    margin: 0 auto; /* Center horizontally */
+    margin-top: 400px; /* Adjust margin top to position vertically in the middle */
+    padding: 20px;
+  }
+
+  .profile-card {
+    position: relative; /* Needed for absolute positioning of the pseudo-element */
+    text-align: center;
+    background: #ffffff; /* White background for the card */
+    border-radius: 45px;
+    padding: 30px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    width: 280px;
+    height: 380px;
+    max-width: 100%;
+    margin-bottom: 20px; /* Space between profile cards */
+    overflow: hidden; /* Ensures pseudo-elements don't overflow */
+  }
+  
+  /* Gradient Background on the Upper Side */
+  .profile-card::before {
+    content: '';
+    position: absolute; /* Absolute positioning to place it correctly */
+    top: -20px; /* Position it above the card */
+    left: 0;
+    right: 0;
+    height: 180px; /* Height of the gradient area */
+    background: linear-gradient(108.4deg, rgb(253, 44, 56) 3.3%, rgb(176, 2, 12) 98.4%);
+  
+    border-radius:  0 0 45px 45px; /* Round the top corners */
+    z-index: 0; /* Ensure it's behind the content */
+  }
+  
+}
+
+
+.generate-profile-button {
+  background-color: #4CAF50; /* Green background */
+  color: white; /* White text */
+  border: none; /* No border */
+  border-radius: 25px; /* Rounded corners */
+  padding: 10px 20px; /* Top and bottom padding, left and right padding */
+  text-align: center; /* Centered text */
+  text-decoration: none; /* No underline */
+  display: inline-block; /* Allows the button to have padding and margin */
+  font-size: 14px; /* Font size */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s; /* Smooth background color transition */
+  width: auto; 
+}
+
+.generate-profile-button:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+
+.shr{
+margin-top: 2px;
+margin-bottom: -2px;
+}
+
+body {
+  overflow: auto; /* Enable scrolling */
+  scrollbar-width: none; /* For Firefox: Hide scrollbar */
+}
+
+body::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Edge: Hide scrollbar */
+}
+
+
+/* Footer styles */
+.app-footer {
+  background-color: #3a3939d4;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin: 0;
+  width: auto;
+  position: relative;
+  border-radius: 25px 25px 0 0;
+}
+
+/* Responsive font sizes */
+.app-footer {
+  font-size: 16px; /* Default font size */
+}
+
+/* Adjust font size for small screens */
+@media (max-width: 600px) {
+  .app-footer {
+    font-size: 12px; /* Smaller font size for mobile devices */
+  }
+}
+
+/* Adjust font size for medium screens */
+@media (min-width: 601px) and (max-width: 960px) {
+  .app-footer {
+    font-size: 15px; /* Slightly larger font size for tablets */
+  }
+}
+
+/* Adjust font size for larger screens */
+@media (min-width: 961px) {
+  .app-footer {
+    font-size: 16px; /* Default font size for larger screens */
+  }
+}
+
+
+
+.text {
+  font-size: 16px; /* Default font size for larger screens */
+  color: #4a4a4a; /* Dark gray color */
+  font-weight: bold; /* Bold font style */
+  text-align: center; /* Center the text */
+  margin-bottom: 19px; /* Add space below the heading */
+  margin-top: -20px; /* Move it up */
+  padding: 15px 20px; /* Padding around the text */
+  background: linear-gradient(45deg, #f093fb, #f5576c); /* Gradient background */
+  color: #fff; /* Text color */
+  border-radius: 25px 25px 0 0; /* Rounded corners */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); 
+  width: 100%;
+  margin-left: -20px;
+}
+
+/* Media query for tablets */
+@media (max-width: 768px) {
+  .text {
+    font-size: 14px; /* Font size for tablet screens */
+  }
+}
+
+/* Media query for mobile devices */
+@media (max-width: 480px) {
+  .text {
+    font-size: 12px; /* Font size for mobile screens */
+  }
+}
+
