@@ -46,7 +46,7 @@ Fully deployed and accessible via the live URL, with instant updates for every n
 
 # Detailed Description
 
-CardConnect was developed with the goal of making it easier for professionals to build and share a digital business card with minimal effort. This application features a simple and elegant design to focus on content rather than unnecessary elements, providing users a clean interface for creating their profiles.
+Card Connect was developed with the goal of making it easier for professionals to build and share a digital business card with minimal effort. This application features a simple and elegant design to focus on content rather than unnecessary elements, providing users a clean interface for creating their profiles.
 
 The multi-step form guides users through the process of adding essential information like name, job title, and a short bio, along with optional social media links. Once created, the profile can be shared using a unique URL, which directs recipients to a full-screen display of the digital card perfect for resumes, networking, and building an online presence.
 
