@@ -1,6 +1,6 @@
 # Card Connect
 
-CardConnect is a modern and interactive digital profile card application that enables users to create, customize, and share professional profiles with a unique touch. This responsive web application is designed to help users build a professional identity in a visually appealing format and share it seamlessly across platforms.
+Card Connect is a modern and interactive digital profile card application that enables users to create, customize, and share professional profiles with a unique touch. This responsive web application is designed to help users build a professional identity in a visually appealing format and share it seamlessly across platforms.
 
 # 🔗 Live Demo
 
@@ -48,5 +48,5 @@ Fully deployed and accessible via the live URL, with instant updates for every n
 
 CardConnect was developed with the goal of making it easier for professionals to build and share a digital business card with minimal effort. This application features a simple and elegant design to focus on content rather than unnecessary elements, providing users a clean interface for creating their profiles.
 
-The multi-step form guides users through the process of adding essential information like name, job title, and a short bio, along with optional social media links. Once created, the profile can be shared using a unique URL, which directs recipients to a full-screen display of the digital card — perfect for resumes, networking, and building an online presence.
+The multi-step form guides users through the process of adding essential information like name, job title, and a short bio, along with optional social media links. Once created, the profile can be shared using a unique URL, which directs recipients to a full-screen display of the digital card perfect for resumes, networking, and building an online presence.
 
